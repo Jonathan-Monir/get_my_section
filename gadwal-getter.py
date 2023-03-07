@@ -110,7 +110,7 @@ if st.button("Submit"):
 
                         # closing the pdf file object
                 if count_names >1: 
-                    st.error("more than one name specified in",file)
+                    st.error("more than one name found ")
                 elif count_names==0:
-                    st.error("no names specified in")
+                    st.error("no names found")
         pdf_file.close()
