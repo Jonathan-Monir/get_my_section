@@ -112,5 +112,5 @@ if st.button("Submit"):
                 if count_names >1: 
                     st.error("more than one name specified in",file)
                 elif count_names==0:
-                    st.error("no names specified in",file)
+                    st.error("no names specified in")
         pdf_file.close()
