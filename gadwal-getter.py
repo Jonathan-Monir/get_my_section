@@ -41,9 +41,6 @@ def linear_alg_sec(rakam_el_gloos):
         return False
     return rkm_el_section
 
-sections_path = "sections"
-
-path_file = str(sections_path +"\\")
 import streamlit as st
 files = [f for f in os.listdir('.') if os.path.isfile(f)]
 
@@ -54,7 +51,7 @@ if st.button("Submit"):
     else:
         st.success(f"Hello {name}!")
         for file in files:
-            if i.endswith(".pdf"):
+            if file.endswith(".pdf"):
                 count_got=0
                 pdf_file = open(file, 'rb')    
 
