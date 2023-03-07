@@ -44,8 +44,8 @@ def linear_alg_sec(rakam_el_gloos):
 sections_path = "sections"
 
 path_file = str(sections_path +"\\")
-files = os.listdir(sections_path)
 import streamlit as st
+files = [f for f in os.listdir('.') if os.path.isfile(f)]
 
 name = st.text_input("Enter your name:")
 if st.button("Submit"):
@@ -56,7 +56,7 @@ if st.button("Submit"):
         for file in files:
             if i.endswith(".pdf"):
                 count_got=0
-                pdf_file = open(path_file+file, 'rb')    
+                pdf_file = open(file, 'rb')    
 
                 # creating a pdf reader object
                 pdf_reader = PyPDF2.PdfReader(pdf_file)
